@@ -1,5 +1,5 @@
-require 'love.objects.assets'
-require 'love.objects.game'
+require 'objects.assets'
+require 'objects.game'
 BomberMan = Object:extend()
 
 function BomberMan:new()

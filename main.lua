@@ -1,13 +1,13 @@
-require 'love.gamesettings'
-Object = require 'love.libraries.Classic'
-Input = require 'love.libraries.Input'
+require 'gamesettings'
+Object = require 'libraries.Classic'
+Input = require 'libraries.Input'
 
-require 'love.objects.bomberman'
+require 'objects.bomberman'
 bomberman = BomberMan()
 
-require 'love.rooms.title'
-require 'love.rooms.gameroom'
-require 'love.rooms.stage'
+require 'rooms.title'
+require 'rooms.gameroom'
+require 'rooms.stage'
 
 
 function love.load(arg)

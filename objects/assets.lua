@@ -1,4 +1,4 @@
-require 'love.gamesettings'
+require 'gamesettings'
 Assets = Object:extend()
 
 function Assets:new()

@@ -1,4 +1,4 @@
-require 'love.gamesettings'
+require 'gamesettings'
 Title = Object:extend()
 
 TITLE_SCREEN_IMG = love.graphics.newImage('assets/images/startscreen.png')

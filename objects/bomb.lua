@@ -1,5 +1,5 @@
-require 'love.gamesettings'
-require 'love.objects.explosion'
+require 'gamesettings'
+require 'objects.explosion'
 
 Bomb = Object:extend()
 Bomb.repr = "'!'"

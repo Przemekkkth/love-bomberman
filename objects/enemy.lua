@@ -1,5 +1,5 @@
-require 'love.gamesettings'
-require 'love.objects.scoring'
+require 'gamesettings'
+require 'objects.scoring'
 
 Enemy = Object:extend()
 

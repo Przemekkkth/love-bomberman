@@ -1,4 +1,4 @@
-require 'love.objects.bomb'
+require 'objects.bomb'
 
 Character = Object:extend()
 

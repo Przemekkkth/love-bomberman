@@ -1,4 +1,4 @@
-require 'love.gamesettings'
+require 'gamesettings'
 
 FireBall = Object:extend()
 FireBall.repr = "'f'"

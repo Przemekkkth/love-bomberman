@@ -1,4 +1,4 @@
-require 'love.objects.specials'
+require 'objects.specials'
 
 SpecialSoftBlock = SoftBlock:extend()
 

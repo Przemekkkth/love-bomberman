@@ -1,11 +1,11 @@
-require 'love.gamesettings'
-require 'love.objects.character'
-require 'love.objects.hardblock'
-require 'love.objects.softblock'
-require 'love.objects.assets'
-require 'love.objects.enemy'
-require 'love.objects.specialsoftblock'
-require 'love.objects.infopanel'
+require 'gamesettings'
+require 'objects.character'
+require 'objects.hardblock'
+require 'objects.softblock'
+require 'objects.assets'
+require 'objects.enemy'
+require 'objects.specialsoftblock'
+require 'objects.infopanel'
 
 Game = Object:extend()
 
@@ -14,12 +14,11 @@ function Game:new(main, assets)
     self.ASSETS = assets
     self.level = 1
     self:generate_level()
-    
     self.level_info = InfoPanel(self, self.ASSETS)
     self.bg_music = self.ASSETS.music['BM-Main-BGM.wav']
     self.bg_music:setLooping(true)
     self.bg_music_special = self.ASSETS.music["BM-Power-Up-Get.wav"]
-    self.stage_ending_music = self.ASSETS.music["BM-Stage-Clear.wav"]
+    self.stage_ending_music = self.ASSETS.music["BM-Stage-Clear.wav"] 
 end
 
 function Game:input()

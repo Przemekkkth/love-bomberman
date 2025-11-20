@@ -1,4 +1,4 @@
-require 'love.gamesettings'
+require 'gamesettings'
 
 StageRoom = Object:extend()
 

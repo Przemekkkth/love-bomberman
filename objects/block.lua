@@ -1,4 +1,4 @@
-require 'love.gamesettings'
+require 'gamesettings'
 
 Block = Object:extend()
 Block.repr = "'#'"

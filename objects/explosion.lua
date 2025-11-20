@@ -1,4 +1,4 @@
-require 'love.objects.fireball'
+require 'objects.fireball'
 
 Explosion = Object:extend()
 Explosion.repr = "'e'"

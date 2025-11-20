@@ -1,4 +1,4 @@
-require 'love.objects.bomberman'
+require 'objects.bomberman'
 GameRoom = Object:extend()
 
 function GameRoom:new()

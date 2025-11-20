@@ -1,4 +1,4 @@
-require 'love.objects.block'
+require 'objects.block'
 
 HardBlock = Block:extend()
 HardBlock.repr = "'+'"
