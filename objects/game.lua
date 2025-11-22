@@ -12,6 +12,16 @@ Game = Object:extend()
 function Game:new(main, assets)
     self.MAIN = main
     self.ASSETS = assets
+    self.stats = {
+        score = 0,
+        lives = 3,
+        bomb_limit = 2,
+        remote = false,
+        power = 1,
+        wall_hack = false,
+        bomb_hack = false,
+        flame_pass = false
+    }
     self.level = 1
     self:generate_level()
     self.level_info = InfoPanel(self, self.ASSETS)
@@ -24,6 +34,7 @@ end
 function Game:input()
     self.player:input()
     if input:released('NEXT_LEVEL') then
+        self:save_stats()
         self:stop_music()
         self.level = self.level + 1
         gotoRoom('StageRoom')
@@ -346,6 +357,7 @@ function Game:next_stage()
     self.level_special = self:select_a_special()
     self.player:set_player_position()
     self:regenerate_stage()
+    self.player.score = self.stats.score
 end
 
 function Game:play_bg_music()
@@ -380,9 +392,32 @@ function Game:generate_level()
     table.insert(self.groups.player, self.player)
     self.level_special = self:select_a_special()
     self.level_matrix = self:generate_level_matrix(ROWS, COLS)
+    self:load_stats()
     if self.level_info then
         self.level_info:set_timer()
     end
     
     --self:print_level_matrix()
+end
+
+function Game:load_stats()
+    self.player.score = self.stats.score
+    self.player.lives = self.stats.lives
+    self.player.bomb_limit = self.stats.bomb_limit
+    self.remote = self.stats.remote
+    self.power = self.stats.power
+    self.wall_hack = self.stats.wall_hack
+    self.bomb_hack = self.stats.bomb_hack
+    self.flame_pass = self.stats.flame_pass
+end
+
+function Game:save_stats()
+    self.stats.score = self.player.score
+    self.stats.lives = self.player.lives
+    self.stats.bomb_limit = self.player.bomb_limit
+    self.stats.remote = self.player.remote
+    self.stats.power = self.player.power
+    self.stats.wall_hack = self.player.wall_hack
+    self.stats.bomb_hack = self.player.bomb_hack
+    self.stats.flame_pass = self.player.flame_pass
 end
