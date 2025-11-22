@@ -198,8 +198,8 @@ function Game:insert_enemies_into_level(matrix, enemies)
     for index, enemy_name in ipairs(enemy_name_list) do
         local valid_choice = false
         while not valid_choice do
-            local row = love.math.random(1, ROWS-1)
-            local col = love.math.random(1, COLS-1)
+            local row = love.math.random(2, ROWS-1)
+            local col = love.math.random(2, COLS-1)
 
             -- Check if this row/col within 3 blocks of the player
             if math.random(row - pl_row) <= 3 and math.random(col - pl_col) <= 3 then
