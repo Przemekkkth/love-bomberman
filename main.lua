@@ -23,6 +23,7 @@ function love.load(arg)
     input:bind('e', 'ENTER')
     input:bind('return', 'ENTER')
     input:bind('enter', 'ENTER')
+    input:bind('n', 'NEXT_LEVEL')
 
     current_room = nil
     gotoRoom('Title')

@@ -23,6 +23,11 @@ end
 
 function Game:input()
     self.player:input()
+    if input:released('NEXT_LEVEL') then
+        self:stop_music()
+        self.level = self.level + 1
+        gotoRoom('StageRoom')
+    end
 end
 
 function Game:update()
@@ -336,7 +341,7 @@ function Game:select_a_special()
 end
 
 --[[Increase the stage level number, and selects a new level special]]
-function Game:new_stage()
+function Game:next_stage()
     self.level = self.level + 1
     self.level_special = self:select_a_special()
     self.player:set_player_position()

@@ -108,7 +108,7 @@ function Special:end_stage()
         return
     end
 
-    self.GAME:new_stage()
+    self.GAME:next_stage()
 end
 
 --[[Action to take is special item is hit by an explosion]]
