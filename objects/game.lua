@@ -38,6 +38,10 @@ function Game:input()
         self:stop_music()
         self.level = self.level + 1
         gotoRoom('StageRoom')
+    elseif input:released('TITLE') then
+        self:save_stats()
+        self:stop_music()
+        gotoRoom('Title')
     end
 end
 

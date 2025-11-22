@@ -24,6 +24,7 @@ function love.load(arg)
     input:bind('return', 'ENTER')
     input:bind('enter', 'ENTER')
     input:bind('n', 'NEXT_LEVEL')
+    input:bind('backspace', 'TITLE')
 
     current_room = nil
     gotoRoom('Title')
