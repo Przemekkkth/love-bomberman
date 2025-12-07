@@ -15,3 +15,9 @@ Love Bomberman is a game created using the LÖVE framework. The project is based
 | backspace    | go to title screen    |
 | e/enter    | start    |
 | escape    | go back    |
+
+## Addons
+* [LÖVE](https://love2d.org) framework official website
+* [OOO library](https://github.com/rxi/classic)
+* [Input library](https://github.com/a327ex/boipushy)
+* [Gameplay](https://youtu.be/FhSpUJ5sQGc)
